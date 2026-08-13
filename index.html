@@ -393,6 +393,13 @@
 </a>
 
 <script>
+  // Normaliza telefone BR para E.164 (formato exigido pelas Conversões Otimizadas)
+  function toE164BR(raw) {
+    let digits = raw.replace(/\D/g, '');
+    if (!digits.startsWith('55')) digits = '55' + digits;
+    return '+' + digits;
+  }
+
   // Galeria: gera as 18 imagens automaticamente
   const galleryEl = document.getElementById('gallery');
   const base = 'https://imoveisdebraganca.com.br/imoveis/casa-de-alto-padrao-3-suites-piscina-condominio-euroville-ii-braganca-301/';
@@ -412,8 +419,22 @@
     const telefone = document.getElementById('telefone').value.trim();
     const email = document.getElementById('email').value.trim();
 
-    // Dispara conversão do Google Ads
+    // Dispara conversão do Google Ads (com Conversões Otimizadas: dados do usuário,
+    // hash aplicado automaticamente pelo gtag.js antes do envio ao Google)
     if (typeof gtag === 'function') {
+      const nameParts = nome.split(' ').filter(Boolean);
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.slice(1).join(' ');
+
+      gtag('set', 'user_data', {
+        email: email || undefined,
+        phone_number: telefone ? toE164BR(telefone) : undefined,
+        address: {
+          first_name: firstName,
+          last_name: lastName
+        }
+      });
+
       gtag('event', 'conversion', { 'send_to': CONV_FORMULARIO });
     }
 
