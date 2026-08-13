@@ -16,26 +16,22 @@
 <meta property="og:locale" content="pt_BR">
 
 <!-- ============================================================
-     GOOGLE ADS / ANALYTICS — SUBSTITUA OS IDs ABAIXO
+     GOOGLE ADS — Kaizen Broker Saraiva
+     Ações reaproveitadas: Lead_CasaCondominio_WhatsApp / Lead_CasaCondominio_Formulario
      ============================================================ -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-SEU_ID_AQUI"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18375225412"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-SEU_ID_AQUI');
-  // Se também usar GA4, adicione: gtag('config', 'G-SEU_ID_GA4');
+  gtag('config', 'AW-18375225412');
 
-  // Função de conversão — chame gtagReportConversion() nos cliques de CTA
-  function gtagReportConversion(url) {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-SEU_ID_AQUI/SEU_LABEL_AQUI',
-      'event_callback': function () {
-        if (typeof url !== 'undefined') { window.location = url; }
-      }
-    });
-    return false;
+  const CONV_WHATSAPP = 'AW-18375225412/Z7QICM_Yz90cEMTg_rlE';
+  const CONV_FORMULARIO = 'AW-18375225412/kAv2CKKj4N0cEMTg_rlE';
+
+  function gtagReportConversion(label) {
+    gtag('event', 'conversion', { 'send_to': label });
   }
 </script>
 
@@ -223,7 +219,7 @@
     </div>
     <div class="hero-ctas" style="margin-top:24px;">
       <a class="btn btn-primary" target="_blank" rel="noopener"
-         onclick="gtagReportConversion(); return false;"
+         onclick="gtagReportConversion(CONV_WHATSAPP);"
          href="https://wa.me/5511945973687?text=Ol%C3%A1!%20Tenho%20interesse%20na%20casa%20do%20Condom%C3%ADnio%20Euroville%20II%20(Ref%3A%20301)%20-%20R%24%201.490.000.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F">
         💬 Falar no WhatsApp agora
       </a>
@@ -391,7 +387,7 @@
 </footer>
 
 <a class="sticky-wa" target="_blank" rel="noopener" aria-label="WhatsApp"
-   onclick="gtagReportConversion(); return false;"
+   onclick="gtagReportConversion(CONV_WHATSAPP);"
    href="https://wa.me/5511945973687?text=Ol%C3%A1!%20Tenho%20interesse%20na%20casa%20do%20Condom%C3%ADnio%20Euroville%20II%20(Ref%3A%20301).">
   💬
 </a>
@@ -418,7 +414,7 @@
 
     // Dispara conversão do Google Ads
     if (typeof gtag === 'function') {
-      gtag('event', 'conversion', { 'send_to': 'AW-SEU_ID_AQUI/SEU_LABEL_AQUI' });
+      gtag('event', 'conversion', { 'send_to': CONV_FORMULARIO });
     }
 
     const msg = `Olá! Meu nome é ${nome}. Tenho interesse na casa do Condomínio Euroville II (Ref: 301) - R$ 1.490.000. Telefone: ${telefone}${email ? ' | E-mail: ' + email : ''}`;
