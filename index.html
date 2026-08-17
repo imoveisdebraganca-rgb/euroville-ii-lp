@@ -105,6 +105,7 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   .btn-outline-light{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.18);}
   .btn-outline-light:hover{background:#f2ead9;}
   .btn-gold{background:var(--accent);color:#fff;box-shadow:0 10px 26px rgba(169,121,62,.32);}
+  .btn-dark{background:#141414;color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.30);}
   .btn-block{width:100%;justify-content:center;}
 
   /* HEADER */
@@ -117,13 +118,12 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   .brandmark{display:flex;align-items:center;gap:12px;}
   .brandmark img{height:42px;width:42px;border-radius:50%;object-fit:cover;}
   .brandmark .name{font-family:'Fraunces',serif;font-size:16px;color:var(--ink);line-height:1.25;}
-  .brandmark .name small{display:block;font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin-top:1px;}
   nav.mainnav{display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500;color:var(--ink-2);}
   nav.mainnav a:hover{color:var(--ink);}
   .top-cta{display:flex;align-items:center;gap:18px;}
   .top-cta .phone{font-size:12.5px;color:var(--ink-2);white-space:nowrap;}
   @media(max-width:900px){ nav.mainnav{display:none;} .top-cta .phone{display:none;} }
-  @media(max-width:480px){ .brandmark .name{display:none;} .top-inner{padding:14px 0;} .btn-gold{padding:13px 22px;font-size:13.5px;} }
+  @media(max-width:480px){ .top-inner{padding:14px 0;} .btn-dark{padding:13px 22px;font-size:13.5px;} }
 
   /* HERO */
   .hero{
@@ -141,6 +141,8 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   }
   .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(24,18,12,.30), rgba(20,15,10,.72));z-index:2;}
   .hero-inner{position:relative;z-index:3;padding-bottom:56px;max-width:680px;}
+  .hero-photo{max-width:360px;margin-bottom:26px;border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 38px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.16);}
+  .hero-photo img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;}
   .hero .eyebrow{display:inline-block;color:#fdf6e8;background:rgba(13,10,7,.45);border:1px solid rgba(255,255,255,.18);padding:7px 16px;border-radius:999px;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
   .hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.12;margin-bottom:18px;font-weight:500;}
   .hero p.sub{font-size:17px;opacity:.9;max-width:540px;margin-bottom:30px;}
@@ -281,7 +283,7 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   <div class="container top-inner">
     <div class="brandmark">
       <img src="logo.jpg" alt="Logomarca SARAIVA Bragança Imóveis" width="42" height="42">
-      <div class="name">SARAIVA <small>Bragança Imóveis</small></div>
+      <div class="name">Imóveis de Bragança</div>
     </div>
     <nav class="mainnav">
       <a href="#imovel">Imóvel</a>
@@ -292,7 +294,7 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
     </nav>
     <div class="top-cta">
       <span class="phone">📞 (11) 94597-3687</span>
-      <a class="btn btn-gold" href="#formulario">Agendar Visita</a>
+      <a class="btn btn-dark" href="#formulario">Agendar Visita</a>
     </div>
   </div>
 </header>
@@ -316,6 +318,10 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
         <span class="price-label">Por · venda imediata</span>
         <span class="price-new">R$ 1.490.000</span>
       </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="https://imoveisdebraganca.com.br/imoveis/casa-de-alto-padrao-3-suites-piscina-condominio-euroville-ii-braganca-301/01.jpg" alt="Fachada da casa no Condomínio Euroville II" width="640" height="400" loading="eager">
     </div>
 
     <div class="ctas">
