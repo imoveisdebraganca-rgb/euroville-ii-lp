@@ -122,7 +122,8 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   nav.mainnav a:hover{color:var(--ink);}
   .top-cta{display:flex;align-items:center;gap:18px;}
   .top-cta .phone{font-size:12.5px;color:var(--ink-2);white-space:nowrap;}
-  @media(max-width:900px){ nav.mainnav{display:none;} }
+  @media(max-width:900px){ nav.mainnav{display:none;} .top-cta .phone{display:none;} }
+  @media(max-width:480px){ .brandmark .name{display:none;} .top-inner{padding:14px 0;} .btn-gold{padding:13px 22px;font-size:13.5px;} }
 
   /* HERO */
   .hero{
@@ -140,6 +141,7 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   }
   .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(24,18,12,.30), rgba(20,15,10,.72));z-index:2;}
   .hero-inner{position:relative;z-index:3;padding-bottom:56px;max-width:680px;}
+  .hero .eyebrow{display:inline-block;color:#fdf6e8;background:rgba(13,10,7,.45);border:1px solid rgba(255,255,255,.18);padding:7px 16px;border-radius:999px;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
   .hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.12;margin-bottom:18px;font-weight:500;}
   .hero p.sub{font-size:17px;opacity:.9;max-width:540px;margin-bottom:30px;}
   .price-block{
@@ -289,7 +291,7 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
       <a href="#formulario">Contato</a>
     </nav>
     <div class="top-cta">
-      <span class="phone">📞 (11) 94597-3687 · CRECI SP 049.291-J</span>
+      <span class="phone">📞 (11) 94597-3687</span>
       <a class="btn btn-gold" href="#formulario">Agendar Visita</a>
     </div>
   </div>
@@ -301,7 +303,7 @@ src="https://www.facebook.com/tr?id=1703534584289824&ev=PageView&noscript=1"
   <div class="hero-bg-soft"></div>
   <div class="hero-scrim"></div>
   <div class="container hero-inner">
-    <div class="eyebrow" style="color:var(--accent-2);">Condomínio Euroville II · Bragança Paulista/SP</div>
+    <div class="eyebrow">Condomínio Euroville II · Bragança Paulista/SP</div>
     <h1>Casa de Alto Padrão com 3 Suítes e Piscina, pronta para morar</h1>
     <p class="sub">385m² de terreno em condomínio fechado com portaria 24h, a menos de 1h de São Paulo. Área gourmet integrada à piscina e acabamento completo.</p>
 
